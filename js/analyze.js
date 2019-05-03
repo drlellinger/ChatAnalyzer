@@ -95,7 +95,7 @@ function readSingleFile(e) {
       // Show Error four Groups
       var div = document.createElement('div');
       div.className = 'col-sm';
-      div.innerHTML = "<p>If this is no group chat you have probably copy-pased a chat in your chat. Please open your chat file and eliminate the other people.</p>";
+      div.innerHTML = "<p>Dies ist vermutlich ein Gruppenchat. Hier könnten jedoch andere Teilnehmer angezeigt werden wenn deine Chats Nachrichten von anderen Personen enthalten.</p>";
       var erG = document.getElementById("groupInfo");
       erG.appendChild(div);
       erG.style.display = "block";
@@ -358,7 +358,7 @@ function displayChat(content) {
         yAxes: [{
           scaleLabel: {
             display: true,
-            labelString: 'Number Of Messages'
+            labelString: 'Anzahl der Nachrichten'
           }
         }]
       }
@@ -975,7 +975,7 @@ function createDayRadar(content) {
 
   if (content.length > 2) {
     data.push({
-     label:"Total Messages",
+     label:"Nachrichten",
      data:dayCount,
      fill:true,
      backgroundColor: backgroundColorArray[0],
@@ -991,7 +991,7 @@ function createDayRadar(content) {
         document.getElementById("dayRadar"),
         {
         type:"radar",
-        data:{labels:[["Sunday", ""],"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        data:{labels:[["Sonntag", ""],"Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"],
         datasets: data},
         options:{
             elements:{
@@ -1133,7 +1133,7 @@ function createChonologicalGraph(content) {
   // total
   if (content.length > 2) {
       data.push( {
-        label: "Total Activity",
+        label: "Aktivität",
         data: totalActivity,
         type: 'line',
         fill: true,
