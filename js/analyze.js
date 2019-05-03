@@ -1191,7 +1191,7 @@ function createChonologicalGraph(content) {
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Number Of Messages'
+                  labelString: 'Anzahl der Nachrichten'
                 }
               }]},
             tooltips: {
